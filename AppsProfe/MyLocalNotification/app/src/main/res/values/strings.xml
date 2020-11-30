@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MyLocalNotification</string>
+    <string name="CHANNEL_ID">IMPORTANT</string>
+    <string name="channel_description">Very important notifications</string>
+</resources>
