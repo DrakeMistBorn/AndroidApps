@@ -7,13 +7,15 @@
     android:background="#131231"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/sign_in_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="173dp"
-        tools:layout_editor_absoluteY="337dp"></Button>
+   <Button
+       android:id="@+id/sign_in_button"
+       android:layout_width="297dp"
+       android:layout_height="73dp"
+       android:backgroundTint="#C2FFFFFF"
+       android:text="Sign in with Gmail"
+       android:textColor="#131231"
+       tools:ignore="MissingConstraints"
+       tools:layout_editor_absoluteX="57dp"
+       tools:layout_editor_absoluteY="329dp"></Button>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
