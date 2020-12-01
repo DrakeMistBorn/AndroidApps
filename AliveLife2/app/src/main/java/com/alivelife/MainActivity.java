@@ -29,7 +29,12 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.sign_in_button).setOnClickListener((View.OnClickListener) this);*/
 
         Button signinBttn = findViewById(R.id.sign_in_button);
-        signinBttn.setOnClickListener((View.OnClickListener)this);
+        signinBttn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
 
     }
 }

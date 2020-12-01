@@ -7,24 +7,26 @@
     android:background="#131231"
     tools:context=".MainActivity">
 
+   <ImageView
+       android:id="@+id/imageView3"
+       android:layout_width="56dp"
+       android:layout_height="56dp"
+       android:layout_marginStart="96dp"
+       android:translationZ="3dp"
+       app:layout_constraintStart_toStartOf="parent"
+       app:srcCompat="@drawable/gmail_logo"
+       tools:ignore="MissingConstraints"
+       tools:layout_editor_absoluteY="397dp" />
+
    <Button
        android:id="@+id/sign_in_button"
        android:layout_width="297dp"
        android:layout_height="73dp"
        android:backgroundTint="#C2FFFFFF"
-       android:text="Sign in with Gmail"
+       android:text="           Sign in with Gmail"
        android:textColor="#131231"
        tools:ignore="MissingConstraints"
-       tools:layout_editor_absoluteX="73dp"
+       tools:layout_editor_absoluteX="83dp"
        tools:layout_editor_absoluteY="389dp"></Button>
-
-   <ImageView
-       android:id="@+id/imageView3"
-       android:layout_width="56dp"
-       android:layout_height="56dp"
-       app:srcCompat="@drawable/gmail_01"
-       tools:ignore="MissingConstraints"
-       tools:layout_editor_absoluteX="82dp"
-       tools:layout_editor_absoluteY="397dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
