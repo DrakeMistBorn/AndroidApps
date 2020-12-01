@@ -23,7 +23,6 @@ public class MainActivity extends AppCompatActivity {
                 .build();
 
         // Set the dimensions of the sign-in button.
-        // Prueba para git
         Button signInButton = findViewById(R.id.sign_in_button);
         /*signInButton.setSize(SignInButton.SIZE_STANDARD);*/
 
