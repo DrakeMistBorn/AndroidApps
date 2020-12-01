@@ -8,12 +8,12 @@ android {
 
     defaultConfig {
         applicationId "com.example.alivelife"
-        minSdkVersion 24
+        minsdkversion 24
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
