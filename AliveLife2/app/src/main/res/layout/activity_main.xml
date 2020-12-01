@@ -11,22 +11,30 @@
        android:id="@+id/imageView3"
        android:layout_width="56dp"
        android:layout_height="56dp"
-       android:layout_marginStart="96dp"
-       android:translationZ="3dp"
-       app:layout_constraintStart_toStartOf="parent"
+       android:layout_marginStart="13dp"
+       android:layout_marginTop="8dp"
+       android:layout_marginBottom="8dp"
+       android:translationZ="10dp"
+       app:layout_constraintBottom_toBottomOf="@+id/sign_in_button"
+       app:layout_constraintStart_toStartOf="@+id/sign_in_button"
+       app:layout_constraintTop_toTopOf="@+id/sign_in_button"
        app:srcCompat="@drawable/gmail_logo"
-       tools:ignore="MissingConstraints"
-       tools:layout_editor_absoluteY="397dp" />
+       tools:ignore="MissingConstraints" />
 
    <Button
        android:id="@+id/sign_in_button"
        android:layout_width="297dp"
-       android:layout_height="73dp"
-       android:backgroundTint="#C2FFFFFF"
+       android:layout_height="80dp"
+       android:backgroundTint="#FFFFFFFF"
        android:text="           Sign in with Gmail"
        android:textColor="#131231"
-       tools:ignore="MissingConstraints"
-       tools:layout_editor_absoluteX="83dp"
-       tools:layout_editor_absoluteY="389dp"></Button>
+       android:translationZ="2dp"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent"
+       app:layout_constraintVertical_bias="0.499"
+       tools:ignore="MissingConstraints"></Button>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
