@@ -14,13 +14,35 @@ public class SignInActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ImageButton signinBttn = findViewById(R.id.sign_in_button);
-        signinBttn.setOnClickListener(new View.OnClickListener() {
+        /*ImageButton signinBttn = findViewById(R.id.sign_in_button);
+        signinBttn.setOnClickListener( new View.OnClickListener() {
+            @Override
             public void onClick (View v) {
                 SignIn_btn(v);
                 Intent i = new Intent(SignInActivity.this, UserView.class);
                 startActivity(i);
             }
+        });
+*/
+        addListenerOnButton();
+
+    }
+
+    public void addListenerOnButton() {
+
+        ImageButton signinBttn = (ImageButton) findViewById(R.id.sign_in_button);
+
+        signinBttn.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                SignIn_btn(v);
+                Intent i = new Intent(SignInActivity.this, UserView.class);
+                startActivity(i);
+
+            }
+
         });
 
     }
