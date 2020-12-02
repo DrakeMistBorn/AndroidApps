@@ -5,11 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
-
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
-import com.google.android.gms.common.SignInButton;
 
 public class SignInActivity extends AppCompatActivity {
 
@@ -20,9 +16,11 @@ public class SignInActivity extends AppCompatActivity {
 
         ImageButton signinBttn = findViewById(R.id.sign_in_button);
         signinBttn.setOnClickListener(new View.OnClickListener() {
-            SignIn_btn(View v)
-            Intent i = new Intent( SignInActivity.this, UserView.class);
-            startActivity(i)
+            public void onClick (View v) {
+                SignIn_btn(v);
+                Intent i = new Intent(SignInActivity.this, UserView.class);
+                startActivity(i);
+            }
         });
 
     }

@@ -4,4 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#131231"/>
+    android:background="#131231"><![CDATA[
+
+    tools:ignore="MissingConstraints" />
+
+
+
+
+
+
+    ]]>
+
+    <ImageButton
+        android:id="@+id/imageButton5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#00000E25"
+        app:srcCompat="@drawable/red_button2"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="108dp"
+        tools:layout_editor_absoluteY="61dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
