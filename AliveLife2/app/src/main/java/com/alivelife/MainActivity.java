@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.SignInButton;
@@ -28,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
         findViewById(R.id.sign_in_button).setOnClickListener((View.OnClickListener) this);*/
 
-        Button signinBttn = findViewById(R.id.sign_in_button);
+        ImageButton signinBttn = findViewById(R.id.sign_in_button);
         signinBttn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
