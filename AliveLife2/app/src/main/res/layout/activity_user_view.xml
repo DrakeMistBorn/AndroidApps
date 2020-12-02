@@ -13,6 +13,8 @@
 
 
 
+
+
     ]]>
 
     <ImageButton
@@ -22,11 +24,102 @@
         android:backgroundTint="#00000E25"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.271"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.132"
+        app:layout_constraintVertical_bias="0.201"
         app:srcCompat="@drawable/red_button2"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/whiteSquare"
+        android:layout_width="334dp"
+        android:layout_height="126dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.735"
+        app:srcCompat="@drawable/square_white"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/whiteSquare3"
+        android:layout_width="334dp"
+        android:layout_height="126dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.907"
+        app:srcCompat="@drawable/square_white"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/whiteSquare2"
+        android:layout_width="334dp"
+        android:layout_height="126dp"
+        android:layout_marginStart="2dp"
+        app:layout_constraintBottom_toBottomOf="@+id/whiteSquare3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.621"
+        app:srcCompat="@drawable/square_white"
+        tools:ignore="MissingConstraints" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="47dp"
+        android:layout_marginBottom="52dp"
+        app:layout_constraintBottom_toBottomOf="@+id/whiteSquare2"
+        app:layout_constraintEnd_toEndOf="@+id/whiteSquare2"
+        app:layout_constraintHorizontal_bias="0.906"
+        app:layout_constraintStart_toStartOf="@+id/whiteSquare2"
+        app:layout_constraintTop_toTopOf="@+id/whiteSquare2"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Switch
+        android:id="@+id/switch3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/whiteSquare3"
+        app:layout_constraintEnd_toEndOf="@+id/whiteSquare"
+        app:layout_constraintHorizontal_bias="0.913"
+        app:layout_constraintStart_toStartOf="@+id/whiteSquare"
+        app:layout_constraintTop_toBottomOf="@+id/whiteSquare2"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Switch
+        android:id="@+id/switch4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="264dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintBottom_toBottomOf="@+id/whiteSquare3"
+        app:layout_constraintEnd_toEndOf="@+id/whiteSquare3"
+        app:layout_constraintStart_toStartOf="@+id/whiteSquare3"
+        app:layout_constraintTop_toBottomOf="@+id/whiteSquare"
+        app:layout_constraintVertical_bias="0.337" />
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:backgroundTint="#00000E25"
+        app:layout_constraintBottom_toTopOf="@+id/whiteSquare"
+        app:layout_constraintEnd_toEndOf="@+id/whiteSquare2"
+        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintStart_toStartOf="@+id/whiteSquare2"
+        app:layout_constraintTop_toTopOf="@+id/whiteSquare2"
+        app:layout_constraintVertical_bias="0.701"
+        app:srcCompat="@drawable/conf_btn"
         tools:ignore="MissingConstraints" />
 
 
