@@ -20,11 +20,7 @@ public class SignInActivity extends AppCompatActivity {
 
         ImageButton signinBttn = findViewById(R.id.sign_in_button);
         signinBttn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-
+            SignIn_btn(View v)
             Intent i = new Intent( SignInActivity.this, UserView.class);
             startActivity(i)
         });
@@ -32,5 +28,6 @@ public class SignInActivity extends AppCompatActivity {
     }
 
     public void SignIn_btn(View view) {
+
     }
 }
