@@ -122,6 +122,37 @@
         app:srcCompat="@drawable/conf_btn"
         tools:ignore="MissingConstraints" />
 
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:backgroundTint="#00000E25"
+        app:layout_constraintBottom_toTopOf="@+id/whiteSquare3"
+        app:layout_constraintEnd_toEndOf="@+id/whiteSquare"
+        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintStart_toStartOf="@+id/whiteSquare"
+        app:layout_constraintTop_toBottomOf="@+id/whiteSquare2"
+        app:layout_constraintVertical_bias="0.6"
+        app:srcCompat="@drawable/conf_btn"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/imageButton5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:backgroundTint="#00000E25"
+        app:layout_constraintBottom_toBottomOf="@+id/whiteSquare3"
+        app:layout_constraintEnd_toEndOf="@+id/whiteSquare3"
+        app:layout_constraintHorizontal_bias="0.063"
+        app:layout_constraintStart_toStartOf="@+id/whiteSquare3"
+        app:layout_constraintTop_toTopOf="@+id/whiteSquare3"
+        app:layout_constraintVertical_bias="0.539"
+        app:srcCompat="@drawable/conf_btn"
+        tools:ignore="MissingConstraints"></ImageButton>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
