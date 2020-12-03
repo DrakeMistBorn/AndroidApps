@@ -72,20 +72,20 @@
         tools:ignore="MissingConstraints" />
 
     <Switch
-        android:id="@+id/switch1"
+        android:id="@+id/switchLocation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="47dp"
         android:layout_marginBottom="52dp"
         app:layout_constraintBottom_toBottomOf="@+id/whiteSquare2"
         app:layout_constraintEnd_toEndOf="@+id/whiteSquare2"
-        app:layout_constraintHorizontal_bias="0.906"
+        app:layout_constraintHorizontal_bias="0.958"
         app:layout_constraintStart_toStartOf="@+id/whiteSquare2"
         app:layout_constraintTop_toTopOf="@+id/whiteSquare2"
         app:layout_constraintVertical_bias="1.0" />
 
     <Switch
-        android:id="@+id/switch3"
+        android:id="@+id/switchPictures"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@+id/whiteSquare3"
@@ -96,7 +96,7 @@
         app:layout_constraintVertical_bias="0.5" />
 
     <Switch
-        android:id="@+id/switch4"
+        android:id="@+id/switchAudio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="264dp"
@@ -108,14 +108,14 @@
         app:layout_constraintVertical_bias="0.337" />
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/settingsLocation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#000000"
         android:backgroundTint="#00000E25"
         app:layout_constraintBottom_toTopOf="@+id/whiteSquare"
         app:layout_constraintEnd_toEndOf="@+id/whiteSquare2"
-        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintHorizontal_bias="0.03"
         app:layout_constraintStart_toStartOf="@+id/whiteSquare2"
         app:layout_constraintTop_toTopOf="@+id/whiteSquare2"
         app:layout_constraintVertical_bias="0.701"
@@ -123,7 +123,7 @@
         tools:ignore="MissingConstraints" />
 
     <ImageButton
-        android:id="@+id/imageButton4"
+        android:id="@+id/settingsPictures"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#000000"
@@ -138,7 +138,7 @@
         tools:ignore="MissingConstraints" />
 
     <ImageButton
-        android:id="@+id/imageButton5"
+        android:id="@+id/settingsAudio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#000000"
@@ -152,6 +152,62 @@
         app:srcCompat="@drawable/conf_btn"
         tools:ignore="MissingConstraints"></ImageButton>
 
+    <Button
+        android:id="@+id/protectorViewBttn"
+        android:layout_width="220dp"
+        android:layout_height="105dp"
+        android:layout_marginBottom="644dp"
+        android:backgroundTint="#BCBAC5"
+        android:textColor="#0F0E25"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/UserViewTest"
+        android:layout_width="106dp"
+        android:layout_height="63dp"
+        android:text="User"
+        android:textColor="#C2FFFFFF"
+        android:textSize="120px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.186"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.007"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/protectorViewText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Protector"
+        android:textColor="#0F0E25"
+        android:textSize="120px"
+        android:translationZ="3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.977"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.01"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/locationPicture"
+        android:layout_width="219dp"
+        android:layout_height="47dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.567"
+        app:srcCompat="@drawable/location_user_view"
+        tools:ignore="MissingConstraints" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
