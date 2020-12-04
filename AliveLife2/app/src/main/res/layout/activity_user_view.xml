@@ -15,20 +15,21 @@
 
 
 
+
+
     ]]>
 
     <ImageButton
         android:id="@+id/redButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="217dp"
+        android:layout_height="208dp"
         android:backgroundTint="#00000E25"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.201"
-        app:srcCompat="@drawable/red_button2"
+        app:layout_constraintVertical_bias="0.217"
+        app:srcCompat="@drawable/red_button3"
         tools:ignore="MissingConstraints" />
 
     <ImageView
@@ -79,7 +80,7 @@
         android:layout_marginBottom="52dp"
         app:layout_constraintBottom_toBottomOf="@+id/whiteSquare2"
         app:layout_constraintEnd_toEndOf="@+id/whiteSquare2"
-        app:layout_constraintHorizontal_bias="0.958"
+        app:layout_constraintHorizontal_bias="0.97"
         app:layout_constraintStart_toStartOf="@+id/whiteSquare2"
         app:layout_constraintTop_toTopOf="@+id/whiteSquare2"
         app:layout_constraintVertical_bias="1.0" />
@@ -88,24 +89,24 @@
         android:id="@+id/switchPictures"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/whiteSquare3"
+        app:layout_constraintBottom_toTopOf="@+id/whiteSquare"
         app:layout_constraintEnd_toEndOf="@+id/whiteSquare"
-        app:layout_constraintHorizontal_bias="0.913"
+        app:layout_constraintHorizontal_bias="0.97"
         app:layout_constraintStart_toStartOf="@+id/whiteSquare"
-        app:layout_constraintTop_toBottomOf="@+id/whiteSquare2"
+        app:layout_constraintTop_toBottomOf="@+id/whiteSquare"
         app:layout_constraintVertical_bias="0.5" />
+
 
     <Switch
         android:id="@+id/switchAudio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="264dp"
-        android:layout_marginEnd="24dp"
-        app:layout_constraintBottom_toBottomOf="@+id/whiteSquare3"
+        app:layout_constraintBottom_toTopOf="@+id/whiteSquare3"
         app:layout_constraintEnd_toEndOf="@+id/whiteSquare3"
+        app:layout_constraintHorizontal_bias="0.97"
         app:layout_constraintStart_toStartOf="@+id/whiteSquare3"
-        app:layout_constraintTop_toBottomOf="@+id/whiteSquare"
-        app:layout_constraintVertical_bias="0.337" />
+        app:layout_constraintTop_toBottomOf="@+id/whiteSquare3"
+        app:layout_constraintVertical_bias="0.509" />
 
     <ImageButton
         android:id="@+id/settingsLocation"
@@ -130,7 +131,7 @@
         android:backgroundTint="#00000E25"
         app:layout_constraintBottom_toTopOf="@+id/whiteSquare3"
         app:layout_constraintEnd_toEndOf="@+id/whiteSquare"
-        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintHorizontal_bias="0.03"
         app:layout_constraintStart_toStartOf="@+id/whiteSquare"
         app:layout_constraintTop_toBottomOf="@+id/whiteSquare2"
         app:layout_constraintVertical_bias="0.6"
@@ -145,7 +146,7 @@
         android:backgroundTint="#00000E25"
         app:layout_constraintBottom_toBottomOf="@+id/whiteSquare3"
         app:layout_constraintEnd_toEndOf="@+id/whiteSquare3"
-        app:layout_constraintHorizontal_bias="0.063"
+        app:layout_constraintHorizontal_bias="0.033"
         app:layout_constraintStart_toStartOf="@+id/whiteSquare3"
         app:layout_constraintTop_toTopOf="@+id/whiteSquare3"
         app:layout_constraintVertical_bias="0.539"
@@ -163,21 +164,22 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.05"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="top"/>
 
     <TextView
         android:id="@+id/UserViewTest"
-        android:layout_width="106dp"
-        android:layout_height="63dp"
+        android:layout_width="91dp"
+        android:layout_height="62dp"
         android:text="User"
         android:textColor="#C2FFFFFF"
-        android:textSize="120px"
+        android:textSize="110px"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.186"
+        app:layout_constraintHorizontal_bias="0.215"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.007"
+        app:layout_constraintVertical_bias="0.023"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -186,14 +188,14 @@
         android:layout_height="wrap_content"
         android:text="Protector"
         android:textColor="#0F0E25"
-        android:textSize="120px"
+        android:textSize="110px"
         android:translationZ="3dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.977"
+        app:layout_constraintHorizontal_bias="0.932"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.01"
+        app:layout_constraintVertical_bias="0.023"
         tools:ignore="MissingConstraints" />
 
     <ImageView
@@ -205,9 +207,35 @@
         app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.567"
+        app:layout_constraintVertical_bias="0.554"
         app:srcCompat="@drawable/location_user_view"
         tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/photoPicture"
+        android:layout_width="219dp"
+        android:layout_height="47dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.707"
+        app:srcCompat="@drawable/photo_user_view"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/audioPicture"
+        android:layout_width="219dp"
+        android:layout_height="47dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.858"
+        app:srcCompat="@drawable/audio_user_view"
+        tools:ignore="MissingConstraints" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
