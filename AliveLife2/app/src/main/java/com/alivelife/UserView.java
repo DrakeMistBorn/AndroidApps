@@ -20,8 +20,8 @@ public class UserView extends AppCompatActivity {
         ImageButton redBttn = findViewById(R.id.redButton);
         redBttn.setOnClickListener(new View.OnClickListener() {
             public void onClick (View v) {
-                Intent i = new Intent(UserView.this, SignInActivity.class);
-                startActivity(i);
+                //Intent i = new Intent(UserView.this, SignInActivity.class);
+                //startActivity(i);
             }
         });
 
