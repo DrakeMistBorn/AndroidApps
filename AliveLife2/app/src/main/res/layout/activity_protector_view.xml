@@ -159,7 +159,7 @@
         tools:ignore="MissingConstraints"></ImageButton>
 
     <ImageButton
-        android:id="@+id/protectorViewBttn"
+        android:id="@+id/userViewBttn"
         android:layout_width="238dp"
         android:layout_height="83dp"
         android:layout_marginBottom="644dp"
@@ -167,22 +167,22 @@
         android:gravity="top"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/protector_view_btn" />
+        app:srcCompat="@drawable/user_view_btn" />
 
     <TextView
         android:id="@+id/UserViewTest"
-        android:layout_width="91dp"
-        android:layout_height="62dp"
-        android:text="User"
+        android:layout_width="161dp"
+        android:layout_height="63dp"
+        android:text="Protector"
         android:textColor="#C2FFFFFF"
         android:textSize="100px"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.125"
+        app:layout_constraintHorizontal_bias="0.98"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.023"
