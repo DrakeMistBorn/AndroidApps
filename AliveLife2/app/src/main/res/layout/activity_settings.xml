@@ -1,6 +1,151 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#131231"
+        tools:context=".SignInActivity">
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="117dp"
+            android:layout_height="29dp"
+            android:text="TextView"
+            android:textColorPrimary="#FFFFFF"
+            android:visibility="visible"
+            tools:layout_editor_absoluteX="100dp"
+            tools:layout_editor_absoluteY="533dp"
+            tools:text="Time-Lapse"
+            tools:textColor="#FFFFFF"
+            tools:textSize="50px" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="117dp"
+            android:layout_height="29dp"
+            android:layout_marginEnd="100dp"
+            android:text="TextView"
+            android:textColorPrimary="#FFFFFF"
+            android:visibility="visible"
+            app:layout_constraintEnd_toStartOf="@+id/switch8"
+            tools:layout_editor_absoluteY="504dp"
+            tools:text="VIDEO"
+            tools:textColor="#FFFFFF"
+            tools:textSize="50px" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="117dp"
+            android:layout_height="29dp"
+            android:layout_marginEnd="100dp"
+            android:text="TextView"
+            android:textColorPrimary="#FFFFFF"
+            android:visibility="visible"
+            app:layout_constraintEnd_toStartOf="@+id/switch7"
+            tools:layout_editor_absoluteY="352dp"
+            tools:text="PHOTO"
+            tools:textColor="#FFFFFF"
+            tools:textSize="50px" />
+
+        <Switch
+            android:id="@+id/switch6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="48dp"
+            app:layout_constraintBottom_toTopOf="@+id/switch7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.504" />
+
+        <Switch
+            android:id="@+id/switch7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="352dp"
+            android:layout_marginEnd="48dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Switch
+            android:id="@+id/switch8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="48dp"
+            android:layout_marginBottom="200dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/switch7"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="117dp"
+            android:layout_height="29dp"
+            android:layout_marginEnd="100dp"
+            android:text="TextView"
+            android:textColorPrimary="#FFFFFF"
+            android:visibility="visible"
+            app:layout_constraintEnd_toStartOf="@+id/switch6"
+            tools:layout_editor_absoluteY="169dp"
+            tools:text="UBICATION"
+            tools:textColor="#FFFFFF"
+            tools:textSize="50px" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="117dp"
+            android:layout_height="29dp"
+            android:text="TextView"
+            android:textColorPrimary="#FFFFFF"
+            android:visibility="visible"
+            tools:layout_editor_absoluteX="100dp"
+            tools:layout_editor_absoluteY="198dp"
+            tools:text="Time-Lapse"
+            tools:textColor="#FFFFFF"
+            tools:textSize="50px" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="117dp"
+            android:layout_height="29dp"
+            android:text="TextView"
+            android:textColorPrimary="#FFFFFF"
+            android:visibility="visible"
+            tools:layout_editor_absoluteX="100dp"
+            tools:layout_editor_absoluteY="381dp"
+            tools:text="Time-Lapse"
+            tools:textColor="#FFFFFF"
+            tools:textSize="50px" />
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="262dp"
+            android:layout_height="31dp"
+            tools:layout_editor_absoluteX="100dp"
+            tools:layout_editor_absoluteY="275dp"
+            tools:progressBackgroundTint="#FFFFFF"/>
+
+        <SeekBar
+            android:id="@+id/seekBar2"
+            android:layout_width="262dp"
+            android:layout_height="31dp"
+            tools:layout_editor_absoluteX="100dp"
+            tools:layout_editor_absoluteY="443dp"
+            tools:progressBackgroundTint="#FFFFFF" />
+
+        <SeekBar
+            android:id="@+id/seekBar3"
+            android:layout_width="262dp"
+            android:layout_height="31dp"
+            tools:layout_editor_absoluteX="100dp"
+            tools:layout_editor_absoluteY="595dp"
+            tools:progressBackgroundTint="#FFFFFF" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
