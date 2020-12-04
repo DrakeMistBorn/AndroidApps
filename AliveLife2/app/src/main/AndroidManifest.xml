@@ -17,6 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".UserView"></activity>
+        <activity android:name=".Settings"></activity>
     </application>
 
 </manifest>
