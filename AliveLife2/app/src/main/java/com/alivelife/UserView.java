@@ -15,6 +15,8 @@ public class UserView extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_view);
 
+
+        //Red button configuration
         ImageButton redBttn = findViewById(R.id.redButton);
         redBttn.setOnClickListener(new View.OnClickListener() {
             public void onClick (View v) {
@@ -22,6 +24,8 @@ public class UserView extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+        //Settings configuration
         ImageButton settLocationBtn = findViewById(R.id.settingsLocation);
         settLocationBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick (View vL) {
