@@ -12,7 +12,7 @@ buildscript {
     }
 }
 
-allprojects {
+allprojects {  // Necessary for oauth login with google.
     repositories {
         google()
         jcenter()
