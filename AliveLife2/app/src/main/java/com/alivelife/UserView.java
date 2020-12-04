@@ -24,19 +24,19 @@ public class UserView extends AppCompatActivity {
         ImageButton settLocationBtn = findViewById(R.id.settingsLocation);
         Intent settings_activity = new Intent(UserView.this, Settings.class);
         settLocationBtn.setOnClickListener(new View.OnClickListener() {
-            public void onClick (View v) {
+            public void onClick (View vL) {
                 startActivity(settings_activity);
             }
         });
         ImageButton settPicturesBtn = findViewById(R.id.settingsPictures);
         settPicturesBtn.setOnClickListener(new View.OnClickListener() {
-            public void onClick (View v) {
+            public void onClick (View vP) {
                 startActivity(settings_activity);
             }
         });
         ImageButton settAudioBtn = findViewById(R.id.settingsAudio);
         settAudioBtn.setOnClickListener(new View.OnClickListener() {
-            public void onClick (View v) {
+            public void onClick (View vA) {
                 startActivity(settings_activity);
             }
         });
