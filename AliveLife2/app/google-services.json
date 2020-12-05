@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "456231572001",
+    "project_id": "alivelifeapp",
+    "storage_bucket": "alivelifeapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:456231572001:android:a5594f7edf54e374a28960",
+        "android_client_info": {
+          "package_name": "com.alivelife"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "456231572001-47fb2i1mllj6gp2ooet88vlca511rqa2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsXIZUPZ_q5GY7PyFXPvY9cfDXiicduik"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "456231572001-47fb2i1mllj6gp2ooet88vlca511rqa2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
