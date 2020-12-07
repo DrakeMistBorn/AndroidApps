@@ -22,7 +22,6 @@
         <activity android:name=".Settings"></activity>
         <activity android:name=".Profile"></activity>
         <activity android:name=".ProtectorView"></activity>
-
     </application>
 
 </manifest>
