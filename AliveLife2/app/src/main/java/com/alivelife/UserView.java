@@ -2,39 +2,46 @@
 package com.alivelife;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.Switch;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class UserView extends AppCompatActivity {
-
-    String etiqueta;
+    ImageButton redButton = findViewById(R.id.redButton);
+    Switch locationButton = findViewById(R.id.switchLocation);
+    Switch picturesButton = findViewById(R.id.switchPictures);
+    Switch audioButton = findViewById(R.id.switchAudio);
 
     @SuppressLint("UseCompatLoadingForDrawables")
     protected void onCreate(Bundle savedInstanceState) {
-        String etiqueta;
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_view);
 
+
         //Red button settings
         //assign the image in code (or you can do this in your layout xml with the src attribute)
-        ImageButton redButton = findViewById(R.id.redButton);
+
         redButton.setImageDrawable(getBaseContext().getResources().getDrawable(R.drawable.red_button));
 
         //set the click listener
         redButton.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View button) {
+                //saveState();
                 //Set the button's appearance
                 button.setSelected(!button.isSelected());
 
                 if (button.isSelected()) {
                     redButton.setImageDrawable(getBaseContext().getResources().getDrawable(R.drawable.orange_button));
+                    //onSaveInstanceState(Bundle outState);
                 } else {
                     redButton.setImageDrawable(getBaseContext().getResources().getDrawable(R.drawable.red_button));
                 }
@@ -42,6 +49,8 @@ public class UserView extends AppCompatActivity {
             }
 
         });
+
+
 
 
 
@@ -79,45 +88,22 @@ public class UserView extends AppCompatActivity {
         });
     }
 
-    @Override
-    protected void onStart(){
-        super.onStart();
-        Log.d(etiqueta, "onStart: ");
+    /*private void saveState() {
+        SharedPreferences preferences=getSharedPreferences("state", Context.MODE_PRIVATE);
 
-    }
+        boolean button = redButton.isSelected(); //isSelected: true, false
+        boolean location = locationButton.isSelected();
+        boolean pictures = picturesButton.isSelected();
+        boolean audio = audioButton.isSelected();
 
 
-    @Override
-    protected void onStop() {
-        super.onStop();
-        Log.d(etiqueta, "onStart:");
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putBoolean("red_button", button);
+        editor.putBoolean("location_activated", location);
+        editor.putBoolean("pictures_activated", pictures);
+        editor.putBoolean("audio_activated", audio);
 
-    }
+    }*/
 
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        Log.d(etiqueta, "onDestroy:");
 
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-        Log.d(etiqueta, "onPause:");
-
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        Log.d(etiqueta, "onResume:");
-
-    }
-
-    @Override
-    protected void onRestart() {
-        super.onRestart();
-        Log.d(etiqueta, "onRestart: ");
-    }
 }
