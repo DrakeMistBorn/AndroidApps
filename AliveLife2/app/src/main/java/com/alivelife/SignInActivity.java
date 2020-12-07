@@ -80,7 +80,7 @@ public class SignInActivity extends AppCompatActivity {
     public void goToSecondActivity(){
         Intent i = new Intent(SignInActivity.this, UserView.class);
         startActivity(i);
-
+        //HEEEEYYYY
         /*
         System.out.println("Estoy en la segunda actividad *******************************************************************");
         System.out.println(String.valueOf(GoogleSignIn.getLastSignedInAccount(this)));
