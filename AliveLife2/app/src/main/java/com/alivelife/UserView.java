@@ -17,23 +17,24 @@ import androidx.appcompat.app.AppCompatActivity;
 public class UserView extends AppCompatActivity {
     ImageButton redButton;
     Switch locationButton, picturesButton, audioButton;
-    TextView txtRedButton, txtLocation, txtPictures, txtAudio;
+    //TextView txtRedButton, txtLocation, txtPictures, txtAudio;
 
-    @SuppressLint({"UseCompatLoadingForDrawables", "WrongViewCast"})
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_view);
+
 
         //************ Settings
 
         locationButton = findViewById(R.id.switchLocation);
         picturesButton = findViewById(R.id.switchPictures);
         audioButton = findViewById(R.id.switchAudio);
-        txtRedButton = (TextView)  findViewById(R.id.redButton);
+        /*txtRedButton = (TextView)  findViewById(R.id.redButton);
         txtLocation = (TextView)  findViewById(R.id.redButton);
         txtPictures = (TextView)  findViewById(R.id.redButton);
-        txtAudio = (TextView) findViewById(R.id.switchAudio);
+        txtAudio = (TextView) findViewById(R.id.switchAudio);*/
 
         //*************
 
@@ -43,21 +44,15 @@ public class UserView extends AppCompatActivity {
         redButton.setImageDrawable(getBaseContext().getResources().getDrawable(R.drawable.red_button));
 
 
+
         //set the click listener
         redButton.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View button) {
                 saveState();
-
                 //Set the button's appearance
                 button.setSelected(!button.isSelected());
-
-                if (button.isSelected()) {
-                    redButton.setImageDrawable(getBaseContext().getResources().getDrawable(R.drawable.orange_button));
-                    //onSaveInstanceState(Bundle outState);
-                } else {
-                    redButton.setImageDrawable(getBaseContext().getResources().getDrawable(R.drawable.red_button));
-                }
+                changeButtonColor (button);
 
             }
 
@@ -71,6 +66,7 @@ public class UserView extends AppCompatActivity {
         ImageButton settLocationBtn = findViewById(R.id.settingsLocation);
         settLocationBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick (View vL) {
+                saveState();
                 Intent settings_activity = new Intent(UserView.this, Settings.class);
                 startActivity(settings_activity);
             }
@@ -78,6 +74,7 @@ public class UserView extends AppCompatActivity {
         ImageButton settPicturesBtn = findViewById(R.id.settingsPictures);
         settPicturesBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick (View vP) {
+                saveState();
                 Intent settings_activity = new Intent(UserView.this, Settings.class);
                 startActivity(settings_activity);
             }
@@ -85,6 +82,7 @@ public class UserView extends AppCompatActivity {
         ImageButton settAudioBtn = findViewById(R.id.settingsAudio);
         settAudioBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick (View vA) {
+                saveState();
                 Intent settings_activity = new Intent(UserView.this, Settings.class);
                 startActivity(settings_activity);
             }
@@ -95,12 +93,16 @@ public class UserView extends AppCompatActivity {
         ImageButton protectorButton = findViewById(R.id.protectorViewBttn);
         protectorButton.setOnClickListener(new View.OnClickListener() {
             public void onClick (View pv) {
+                saveState();
                 Intent settings_activity = new Intent(UserView.this, ProtectorView.class);
                 startActivity(settings_activity);
             }
         });
 
+
         loadPreferences();
+        changeButtonColor (redButton);
+
     }
 
     private void saveState() {
@@ -120,8 +122,6 @@ public class UserView extends AppCompatActivity {
 
 
         editor.commit();
-
-
     }
 
     private void loadPreferences() {
@@ -136,6 +136,16 @@ public class UserView extends AppCompatActivity {
         locationButton.setChecked(location);
         picturesButton.setChecked(pictures);
         audioButton.setChecked(audio);
+    }
+
+    private void changeButtonColor (View button){
+
+        if (button.isSelected()) {
+            redButton.setImageDrawable(getBaseContext().getResources().getDrawable(R.drawable.orange_button));
+            //onSaveInstanceState(Bundle outState);
+        } else {
+            redButton.setImageDrawable(getBaseContext().getResources().getDrawable(R.drawable.red_button));
+        }
     }
 
 
