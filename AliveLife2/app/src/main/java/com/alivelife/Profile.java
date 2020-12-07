@@ -27,7 +27,7 @@ public class Profile extends AppCompatActivity {
             public void onClick(View v) {
 
                 LogOut_btn(v);
-                Intent i = new Intent(Profile.this, SignInActivity.class);
+                Intent i = new Intent(Profile.this, PopWindowLogOut.class);
                 startActivity(i);
 
             }
