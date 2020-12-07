@@ -15,9 +15,8 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class UserView extends AppCompatActivity {
-    ImageButton redButton;
+    ImageButton redButton, txtRedButton, txtLocation, txtPictures, txtAudio;
     Switch locationButton, picturesButton, audioButton;
-    TextView txtRedButton, txtLocation, txtPictures, txtAudio;
 
     @SuppressLint({"UseCompatLoadingForDrawables", "WrongViewCast"})
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,11 +28,11 @@ public class UserView extends AppCompatActivity {
 
         locationButton = findViewById(R.id.switchLocation);
         picturesButton = findViewById(R.id.switchPictures);
-        audioButton = findViewById(R.id.switchAudio);
-        txtRedButton = (TextView)  findViewById(R.id.redButton);
-        txtLocation = (TextView)  findViewById(R.id.redButton);
-        txtPictures = (TextView)  findViewById(R.id.redButton);
-        txtAudio = (TextView) findViewById(R.id.switchAudio);
+        audioButton    = findViewById(R.id.switchAudio);
+        txtRedButton =  findViewById(R.id.redButton);
+        txtLocation =   findViewById(R.id.redButton);
+        txtPictures =   findViewById(R.id.redButton);
+        //txtAudio = findViewById(R.id.switchAudio);
 
         //*************
 
@@ -117,7 +116,6 @@ public class UserView extends AppCompatActivity {
         editor.putBoolean("location_activated", location);
         editor.putBoolean("pictures_activated", pictures);
         editor.putBoolean("audio_activated", audio);
-
 
         editor.commit();
 
