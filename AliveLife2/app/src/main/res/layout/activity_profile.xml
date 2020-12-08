@@ -107,7 +107,7 @@
         android:id="@+id/LogOutButton"
         android:layout_width="300dp"
         android:layout_height="50dp"
-        android:backgroundTint="#C9C9D2"
+        android:backgroundTint="#BDBDC8"
         android:contextClickable="false"
         android:text="@string/log_out"
         android:textColor="@color/black"

@@ -31,10 +31,6 @@ public class UserView extends AppCompatActivity {
         locationButton = findViewById(R.id.switchLocation);
         picturesButton = findViewById(R.id.switchPictures);
         audioButton = findViewById(R.id.switchAudio);
-        /*txtRedButton = (TextView)  findViewById(R.id.redButton);
-        txtLocation = (TextView)  findViewById(R.id.redButton);
-        txtPictures = (TextView)  findViewById(R.id.redButton);
-        txtAudio = (TextView) findViewById(R.id.switchAudio);*/
 
         //*************
 
@@ -139,10 +135,8 @@ public class UserView extends AppCompatActivity {
     }
 
     private void changeButtonColor (View button){
-
         if (button.isSelected()) {
             redButton.setImageDrawable(getBaseContext().getResources().getDrawable(R.drawable.orange_button));
-            //onSaveInstanceState(Bundle outState);
         } else {
             redButton.setImageDrawable(getBaseContext().getResources().getDrawable(R.drawable.red_button));
         }
