@@ -16,7 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".UserView"></activity>
+        <activity android:name=".UserView"
+            android:screenOrientation="portrait"></activity>
         <activity android:name=".Protectees"></activity>
         <activity android:name=".Protectors"></activity>
         <activity android:name=".Settings"></activity>
