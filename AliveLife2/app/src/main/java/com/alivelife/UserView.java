@@ -75,7 +75,7 @@ public class UserView extends AppCompatActivity {
         settPicturesBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick (View vP) {
                 saveState();
-                Intent settings_activity = new Intent(UserView.this, Settings.class);
+                Intent settings_activity = new Intent(UserView.this, Profile.class);
                 startActivity(settings_activity);
             }
         });

@@ -3,16 +3,26 @@ package com.alivelife;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.autofill.AutofillValue;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
 
 public class Profile extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+        TextView nameID = findViewById(R.id.textView4);
+        TextView emailID = findViewById(R.id.textView5);
+        //String idName = ;
+        //nameID.autofill(AutofillValue.forText(String.valueOf(GoogleSignIn.getLastSignedInAccount(this).getGivenName())));
+        nameID.setText(String.valueOf(GoogleSignIn.getLastSignedInAccount(this).getGivenName()));
+        emailID.setText(String.valueOf(GoogleSignIn.getLastSignedInAccount(this).getEmail()));
         addListenerOnButton();
 
     }
