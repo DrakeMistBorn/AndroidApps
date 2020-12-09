@@ -5,7 +5,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
+import android.widget.Spinner;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -29,6 +32,13 @@ public class ProtectorView extends AppCompatActivity {
             }
 
         });
+
+
+        Spinner dropdown = findViewById(R.id.protecteesList);
+        String[] items = new String[]{"1", "2", "three"};
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, items);
+        dropdown.setAdapter(adapter);
+        dropdown.setOnItemSelectedListener((AdapterView.OnItemSelectedListener) this);
     }
 
     @Override
@@ -77,4 +87,6 @@ public class ProtectorView extends AppCompatActivity {
         Log.d(etiqueta, "onResume:");
 
     }
+
+
 }
