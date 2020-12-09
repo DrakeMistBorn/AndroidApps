@@ -4,4 +4,5 @@
     <string name="username">Username</string>
     <string name="email">Email</string>
     <string name="log_out">LOG OUT</string>
+    <string name="protectees">Protectees</string>
 </resources>
