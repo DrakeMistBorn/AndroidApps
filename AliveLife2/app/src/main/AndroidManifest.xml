@@ -25,7 +25,6 @@
         <activity android:name=".ProtectorView"></activity>
         <activity android:name=".PopWindowLogOut" android:theme="@style/Theme.AliveLife.CustomTheme"></activity>
         <activity android:name=".PopWindowDeleteAccount"></activity>
-
     </application>
 
 </manifest>
