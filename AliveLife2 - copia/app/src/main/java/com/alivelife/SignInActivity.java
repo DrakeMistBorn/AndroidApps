@@ -16,9 +16,17 @@ import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.api.ApiException;
+import com.google.android.gms.common.api.Scope;
 import com.google.android.gms.tasks.Task;
+import com.google.api.client.extensions.android.http.AndroidHttp;
+import com.google.api.client.googleapis.extensions.android.gms.auth.GoogleAccountCredential;
+import com.google.api.client.json.gson.GsonFactory;
+import com.google.api.services.drive.Drive;
+import com.google.api.services.drive.DriveScopes;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthCredential;
+
+import java.util.Collections;
 
 public class SignInActivity extends AppCompatActivity {
     private String etiqueta = "Estoy en: ";
@@ -37,6 +45,7 @@ public class SignInActivity extends AppCompatActivity {
         //###   [     Google OAuth2: request users ID and basic profile information     ]
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestEmail()
+                .requestScopes(new Scope(DriveScopes.DRIVE_FILE))
                 .build();
 
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso);        //### Google Sign In Client.
@@ -73,8 +82,10 @@ public class SignInActivity extends AppCompatActivity {
     public void signIn(View v) {
         Intent signInIntent = mGoogleSignInClient.getSignInIntent();
         startActivityForResult(signInIntent, RC_SIGN_IN);       //###     Request code
-        //if(GoogleSignIn.getLastSignedInAccount(this) != null) goToSecondActivity();
-        goToSecondActivity();
+        if(GoogleSignIn.getLastSignedInAccount(this) != null){
+            driveCode();
+            goToSecondActivity();
+        }
     }
 
     //###   [     Go to the second activity if Gmail login was successful    ]
@@ -91,6 +102,19 @@ public class SignInActivity extends AppCompatActivity {
         System.out.println(String.valueOf(GoogleSignIn.getLastSignedInAccount(this).getAccount()));
         System.out.println(String.valueOf(GoogleSignIn.getLastSignedInAccount(this).getIdToken()));
          */
+    }
+
+    private void driveCode(){
+        GoogleAccountCredential credential = GoogleAccountCredential.
+                usingOAuth2(SignInActivity.this, Collections.singleton(DriveScopes.DRIVE_FILE)).
+                setSelectedAccount(GoogleSignIn.getLastSignedInAccount(this).getAccount());
+
+        Drive googleDriveService = new Drive.Builder(
+                AndroidHttp.newCompatibleTransport(),
+                new GsonFactory(),
+                credential)
+                .setApplicationName("AliveLife")
+                .build();
     }
 
 }
