@@ -4,27 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#131231"><![CDATA[
-
+    android:background="#131231"
+    android:textAlignment="center"><![CDATA[
     tools:ignore="MissingConstraints" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     ]]>
@@ -32,15 +14,15 @@
     <ImageView
         android:id="@+id/redButton"
         android:layout_width="216dp"
-        android:layout_height="216dp"
+        android:layout_height="0dp"
         android:backgroundTint="#00000E25"
         android:src="@drawable/avatar"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/photoBottom_guideline"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintHorizontal_bias="0.482"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.242"
+        app:layout_constraintTop_toTopOf="@+id/topBar_guideline"
+        app:layout_constraintVertical_bias="0.18"
         tools:ignore="MissingConstraints" />
 
     <ImageView
@@ -87,13 +69,12 @@
 
     <ImageButton
         android:id="@+id/userViewBttn"
-        android:layout_width="238dp"
-        android:layout_height="83dp"
-        android:layout_marginBottom="644dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:backgroundTint="#00F1F0F4"
         android:gravity="top"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/topBar_guideline"
+        app:layout_constraintEnd_toEndOf="@id/middleVertical_guideline"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -119,12 +100,12 @@
         android:id="@+id/locationPicture"
         android:layout_width="219dp"
         android:layout_height="47dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.489"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.554"
+        app:layout_constraintBottom_toBottomOf="@+id/whiteSquare2"
+        app:layout_constraintEnd_toEndOf="@+id/whiteSquare2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/whiteSquare2"
+        app:layout_constraintTop_toTopOf="@+id/whiteSquare2"
+        app:layout_constraintVertical_bias="0.5"
         app:srcCompat="@drawable/location_user_view"
         tools:ignore="MissingConstraints" />
 
@@ -132,11 +113,12 @@
         android:id="@+id/photoPicture"
         android:layout_width="219dp"
         android:layout_height="47dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.707"
+        app:layout_constraintBottom_toBottomOf="@+id/whiteSquare"
+        app:layout_constraintEnd_toEndOf="@+id/whiteSquare"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/whiteSquare"
+        app:layout_constraintTop_toTopOf="@+id/whiteSquare"
+        app:layout_constraintVertical_bias="0.5"
         app:srcCompat="@drawable/photo_user_view"
         tools:ignore="MissingConstraints" />
 
@@ -144,33 +126,80 @@
         android:id="@+id/audioPicture"
         android:layout_width="219dp"
         android:layout_height="47dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.858"
+        app:layout_constraintBottom_toBottomOf="@+id/whiteSquare3"
+        app:layout_constraintEnd_toEndOf="@+id/whiteSquare3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/whiteSquare3"
+        app:layout_constraintTop_toTopOf="@+id/whiteSquare3"
+        app:layout_constraintVertical_bias="0.5"
         app:srcCompat="@drawable/audio_user_view"
         tools:ignore="MissingConstraints" />
 
     <ImageView
-        android:id="@+id/settingsBottomButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/settingsBottom"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/settingsdown_btn"
+        app:layout_constraintTop_toTopOf="@+id/settingsTop_guideline"
+        app:srcCompat="@drawable/conf_down_btn"
         tools:ignore="MissingConstraints" />
+
 
     <Spinner
         android:id="@+id/protecteesList"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:background="@android:drawable/btn_dropdown"
+        android:backgroundTint="@color/dark_blue"
         android:spinnerMode="dropdown"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/middleVertical_guideline"
+        app:layout_constraintTop_toTopOf="@+id/settingsTop_guideline"
+        tools:ignore="MissingConstraints" />
 
+    <!--<TextView
+        android:id="@+id/protecteesText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/protectees"
+        android:gravity="center"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="28dp"
+        app:layout_constraintBottom_toBottomOf="@+id/protecteesList"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/protecteesList" />
+-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/settingsTop_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="63dp" />
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/middleVertical_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/topBar_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.12603648" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/photoBottom_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.41" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

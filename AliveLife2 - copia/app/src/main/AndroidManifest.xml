@@ -5,6 +5,9 @@
     <uses-permission android:name="android.permission.INTERNET"></uses-permission>
     <uses-permission android:name="android.permission.GET_ACCOUNTS"></uses-permission>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"></uses-permission>
+    <uses-feature android:name="android.hardware.sensor.proximity"
+        android:required="true">
+    </uses-feature>
 
     <application
         android:allowBackup="true"
@@ -15,7 +18,8 @@
         android:theme="@style/Theme.AliveLife">
 
 
-        <activity android:name=".SignInActivity">
+        <activity android:name=".SignInActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,13 +28,21 @@
         </activity>
         <activity android:name=".UserView"
             android:screenOrientation="portrait"></activity>
-        <activity android:name=".Protectees"></activity>
-        <activity android:name=".Protectors"></activity>
-        <activity android:name=".Settings"></activity>
-        <activity android:name=".Profile"></activity>
-        <activity android:name=".ProtectorView"></activity>
-        <activity android:name=".PopWindowLogOut" android:theme="@style/Theme.AliveLife.CustomTheme"></activity>
-        <activity android:name=".PopWindowDeleteAccount"></activity>
+        <activity android:name=".Protectees"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".Protectors"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".Settings"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".Profile"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".ProtectorView"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".PopWindowLogOut"
+            android:theme="@style/Theme.AliveLife.CustomTheme"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".PopWindowDeleteAccount"
+            android:screenOrientation="portrait"></activity>
 
     </application>
 
