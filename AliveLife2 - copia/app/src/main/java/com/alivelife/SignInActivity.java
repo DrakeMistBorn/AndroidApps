@@ -73,7 +73,8 @@ public class SignInActivity extends AppCompatActivity {
     public void signIn(View v) {
         Intent signInIntent = mGoogleSignInClient.getSignInIntent();
         startActivityForResult(signInIntent, RC_SIGN_IN);       //###     Request code
-        if(GoogleSignIn.getLastSignedInAccount(this) != null) goToSecondActivity();
+        //if(GoogleSignIn.getLastSignedInAccount(this) != null) goToSecondActivity();
+        goToSecondActivity();
     }
 
     //###   [     Go to the second activity if Gmail login was successful    ]

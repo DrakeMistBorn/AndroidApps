@@ -67,12 +67,14 @@ public class SignInActivity extends AppCompatActivity {
         startActivityForResult(signInIntent, RC_SIGN_IN);       //###     Request code
         System.out.println("*************************************");
         System.out.println("***** "+GoogleSignIn.getLastSignedInAccount(this));
-        if(GoogleSignIn.getLastSignedInAccount(this) != null) goToSecondActivity();
+        //if(GoogleSignIn.getLastSignedInAccount(this) != null) goToSecondActivity();
+        goToSecondActivity(); //Maria change it *******************************************************************
     }
 
     //###   [     Go to the second activity if Gmail login was successful    ]
     public void goToSecondActivity(){
         Intent i = new Intent(SignInActivity.this, UserView.class);
+        //Intent i = new Intent(SignInActivity.this, Notification_permanent.class);
         startActivity(i);
         //HEEEEYYYY
         /*
