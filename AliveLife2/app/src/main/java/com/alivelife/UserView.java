@@ -139,7 +139,7 @@ public class UserView extends AppCompatActivity {
         Boolean location = preferences.getBoolean("location_activated", false);
         Boolean pictures = preferences.getBoolean("pictures_activated", false);
         Boolean audio = preferences.getBoolean("audio_activated", false);
-
+        // loading preferences
         redButton.setSelected(button);
         locationButton.setChecked(location);
         picturesButton.setChecked(pictures);
