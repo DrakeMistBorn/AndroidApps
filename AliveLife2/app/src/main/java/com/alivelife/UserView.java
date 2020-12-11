@@ -51,7 +51,6 @@ public class UserView extends AppCompatActivity {
         redButton.setImageDrawable(getBaseContext().getResources().getDrawable(R.drawable.red_button));
 
 
-
         //set the click listener
         redButton.setOnClickListener(new View.OnClickListener() {
 
