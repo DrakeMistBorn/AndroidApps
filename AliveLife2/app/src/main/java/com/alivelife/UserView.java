@@ -1,27 +1,16 @@
 
 package com.alivelife;
 
-import android.annotation.SuppressLint;
 import android.app.Notification;
-import android.app.NotificationManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Switch;
-import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.NotificationCompat;
-
-import java.io.File;
-import java.util.Collections;
 
 public class UserView extends AppCompatActivity {
     ImageButton redButton;
@@ -55,14 +44,10 @@ public class UserView extends AppCompatActivity {
         redButton.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View button) {
-                saveState();
                 //Set the button's appearance
                 button.setSelected(!button.isSelected());
-                changeButtonColor (button);
-
-                //notification settings
-                Notification.Builder nb = mNotificationUtils.getAndroidChannelNotification("Candy Splash", "Play today to maintain your streak");
-                mNotificationUtils.getManager().notify(101, nb.build());
+                changeButtonColor(button);
+                saveState();
             }
 
         });
@@ -104,17 +89,20 @@ public class UserView extends AppCompatActivity {
             public void onClick (View pv) {
                 saveState();
                 Intent settings_activity = new Intent(UserView.this, ProtectorView.class);
+                startActivity(settings_activity);
             }
         });
 
 
         loadPreferences();
-        changeButtonColor (redButton);
-
+        setButtonColor(redButton);
     }
 
     private void saveState() {
         SharedPreferences preferences=getSharedPreferences("state", Context.MODE_PRIVATE);
+
+        System.out.println("******************************************************************************");
+        System.out.println("************* SAVE **************"+redButton.isSelected());
 
         boolean button = redButton.isSelected(); //isSelected: true, false
         boolean location = locationButton.isChecked();
@@ -134,8 +122,12 @@ public class UserView extends AppCompatActivity {
 
     public void loadPreferences() {
         SharedPreferences preferences=getSharedPreferences("state", Context.MODE_PRIVATE);
+        System.out.println("******************************************************************************");
+        System.out.println("************* LOAD **************"+redButton.isSelected());
 
         Boolean button = preferences.getBoolean("red_button", false);
+        System.out.println("************* LOAD **************"+button);
+
         Boolean location = preferences.getBoolean("location_activated", false);
         Boolean pictures = preferences.getBoolean("pictures_activated", false);
         Boolean audio = preferences.getBoolean("audio_activated", false);
@@ -146,11 +138,38 @@ public class UserView extends AppCompatActivity {
         audioButton.setChecked(audio);
     }
 
-    private void changeButtonColor (View button){
+    private void setButtonColor(View button){
+        System.out.println("******************************************************************************");
+        System.out.println("************* SET COLOR **************"+redButton.isSelected());
+
         if (button.isSelected()) {
             redButton.setImageDrawable(getBaseContext().getResources().getDrawable(R.drawable.orange_button));
         } else {
             redButton.setImageDrawable(getBaseContext().getResources().getDrawable(R.drawable.red_button));
         }
     }
+
+    private void changeButtonColor(View button){
+        System.out.println("******************************************************************************");
+        System.out.println("************* Change COLOR **************"+redButton.isSelected());
+
+        if (button.isSelected()) {
+            redButton.setImageDrawable(getBaseContext().getResources().getDrawable(R.drawable.orange_button));
+            startNotification();
+        } else {
+            redButton.setImageDrawable(getBaseContext().getResources().getDrawable(R.drawable.red_button));
+            stopNotification();
+        }
+    }
+
+    private void startNotification() {
+        Notification.Builder nb = mNotificationUtils.getAndroidChannelNotification("Candy Splash", "Play today to maintain your streak");
+        mNotificationUtils.getManager().notify(101, nb.build());
+    }
+
+    private void stopNotification() {
+        mNotificationUtils.getManager().cancel(101);
+    }
+
+
 }

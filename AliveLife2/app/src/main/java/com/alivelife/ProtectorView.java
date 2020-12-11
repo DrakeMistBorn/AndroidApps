@@ -12,7 +12,7 @@ import android.widget.Spinner;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class ProtectorView extends AppCompatActivity {
+public class ProtectorView extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     String etiqueta;
 
@@ -35,10 +35,10 @@ public class ProtectorView extends AppCompatActivity {
 
 
         Spinner dropdown = findViewById(R.id.protecteesList);
-        String[] items = new String[]{"1", "2", "three"};
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, items);
+        String[] items = new String[]{"Protectee1", "Protectee2", "Protectee3"};
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
         dropdown.setAdapter(adapter);
-        dropdown.setOnItemSelectedListener((AdapterView.OnItemSelectedListener) this);
+        dropdown.setOnItemSelectedListener(this);
     }
 
     @Override
@@ -89,4 +89,13 @@ public class ProtectorView extends AppCompatActivity {
     }
 
 
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+
+    }
 }
