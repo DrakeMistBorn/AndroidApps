@@ -160,6 +160,7 @@ public class UserView extends AppCompatActivity {
             redButton.setImageDrawable(getBaseContext().getResources().getDrawable(R.drawable.red_button));
             stopNotification();
         }
+
     }
 
     private void startNotification() {
