@@ -2,7 +2,9 @@
 package com.alivelife;
 
 import android.annotation.SuppressLint;
+import android.app.AlarmManager;
 import android.app.Notification;
+import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -12,6 +14,7 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -161,9 +164,14 @@ public class UserView extends AppCompatActivity {
         if (button.isSelected()) {
             redButton.setImageDrawable(getBaseContext().getResources().getDrawable(R.drawable.orange_button));
             startNotification();
+            Intent intent = new Intent(this, YourService.class);
+            startService(intent);
+            //YourService.startForeground();
         } else {
             redButton.setImageDrawable(getBaseContext().getResources().getDrawable(R.drawable.red_button));
             stopNotification();
+            Intent intent = new Intent (this, YourService.class);
+            stopService(intent);
         }
 
     }
@@ -176,6 +184,7 @@ public class UserView extends AppCompatActivity {
     private void stopNotification() {
         mNotificationUtils.getManager().cancel(101);
     }
+
 
 
 }

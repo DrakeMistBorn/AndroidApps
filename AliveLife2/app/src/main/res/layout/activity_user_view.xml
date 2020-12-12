@@ -269,6 +269,14 @@
         app:layout_constraintGuide_percent="0.5" />
 
 
+    <TextView
+        android:id="@+id/textChanger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="163dp"
+        android:textColor="@color/white_gray"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
