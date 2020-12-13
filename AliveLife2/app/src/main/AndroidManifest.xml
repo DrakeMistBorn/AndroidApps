@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.alivelife">
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-feature android:name="android.hardware.camera"
+        android:required="true" />
     <uses-feature android:name="android.hardware.sensor.proximity"
         android:required="true">
     </uses-feature>
@@ -28,6 +31,10 @@
         <activity android:name=".ProtectorView"></activity>
         <activity android:name=".PopWindowLogOut" android:theme="@style/Theme.AliveLife.CustomTheme"></activity>
         <activity android:name=".PopWindowDeleteAccount"></activity>
+
+
+
+
     </application>
 
 </manifest>
