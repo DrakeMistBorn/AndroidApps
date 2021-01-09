@@ -5,4 +5,8 @@
     <string name="email">Email</string>
     <string name="log_out">LOG OUT</string>
     <string name="protectees">Protectees</string>
+    <string name="nombre">Nombre</string>
+    <string name="matricula">MAtricula</string>
+    <string name="grupo">Grupo</string>
+    <string name="anio">Año</string>
 </resources>

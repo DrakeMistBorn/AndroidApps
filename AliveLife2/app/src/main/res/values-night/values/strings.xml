@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Mi RecyclerView</string>
+    <string name="sin_datos">Lista sin datos</string>
+    <string name="title_activity_lista_en_actividad">Actividad Lista de 4</string>
+    <string name="title_activity_lista_en_actividad_4items">Lista en Actividad 4 items</string>
+    <string name="matricula">matricula</string>
+    <string name="grupo">grupo</string>
+    <string name="anio">año</string>
+    <string name="nombre">Nombre del alumno</string>
+    <string name="sinDatos">Lista vacía</string>
+    <string name="action_settings">Settings</string>
+    <string name="hint_nombre">Nombre del Alumno</string>
+    <string name="hint_telefono">Teléfono</string>
+    <string name="hint_correo">Correo</string>
+    <string name="accion_cancelar">Cancelar</string>
+    <string name="accion_aceptar">Aceptar</string>
+</resources>

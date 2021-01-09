@@ -3,36 +3,36 @@ package com.alivelife;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Protectors extends AppCompatActivity {
+public class Help extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile);
+        setContentView(R.layout.activity_help);
         addListenerOnButton();
 
     }
 
+
     public void addListenerOnButton() {
 
-        ImageButton BackBttn = (ImageButton) findViewById(R.id.BackButton);
+        ImageButton LogOutBttn = findViewById(R.id.BackButton);
 
-            BackBttn.setOnClickListener(new View.OnClickListener() {
+        LogOutBttn.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
-                Back_btn(v);
-                Intent i = new Intent(Protectors.this, Settings.class);
+                Intent i = new Intent(Help.this, Settings.class);
                 startActivity(i);
+
             }
+
         });
-
-    }
-
-    public void Back_btn(View view) {
-
     }
 }

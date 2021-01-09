@@ -25,16 +25,17 @@
         app:layout_constraintVertical_bias="0.18"
         tools:ignore="MissingConstraints" />
 
+
     <ImageView
         android:id="@+id/whiteSquare"
         android:layout_width="334dp"
         android:layout_height="126dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.735"
+        app:layout_constraintTop_toTopOf="@+id/photoBottom_guideline"
+        app:layout_constraintVertical_bias="0.452"
         app:srcCompat="@drawable/square_white"
         tools:ignore="MissingConstraints" />
 
@@ -46,8 +47,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.907"
+        app:layout_constraintTop_toTopOf="@+id/photoBottom_guideline"
+        app:layout_constraintVertical_bias="0.93"
         app:srcCompat="@drawable/square_white"
         tools:ignore="MissingConstraints" />
 
@@ -59,15 +60,14 @@
         android:backgroundTint="#BCBAC5"
         app:layout_constraintBottom_toBottomOf="@+id/whiteSquare3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintHorizontal_bias="0.48"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.621"
+        app:layout_constraintTop_toTopOf="@+id/photoBottom_guideline"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/square_white"
         tools:ignore="MissingConstraints" />
 
-
-    <ImageButton
+    <!--<ImageButton
         android:id="@+id/userViewBttn"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -79,21 +79,37 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/user_view_btn" />
+        app:srcCompat="@drawable/user_view_btn" />-->
 
     <TextView
-        android:id="@+id/UserViewTest"
-        android:layout_width="148dp"
-        android:layout_height="45dp"
+        android:id="@+id/ProtectorViewTest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="Protector"
-        android:textColor="#C2FFFFFF"
+        android:textColor="@color/white"
         android:textSize="90px"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/topBar_guideline"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.973"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="@+id/middleVertical_guideline"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023"
+        app:layout_constraintVertical_bias="0.533"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/userViewBttn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/transparent"
+        android:text="User"
+        android:textColor="@color/white_gray"
+        android:textSize="70px"
+        app:layout_constraintBottom_toTopOf="@+id/topBar_guideline"
+        app:layout_constraintEnd_toStartOf="@+id/middleVertical_guideline"
+        app:layout_constraintHorizontal_bias="0.423"
+        app:layout_constraintStart_toEndOf="@+id/settings"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.64"
         tools:ignore="MissingConstraints" />
 
     <ImageView
@@ -135,16 +151,6 @@
         app:srcCompat="@drawable/audio_user_view"
         tools:ignore="MissingConstraints" />
 
-    <ImageView
-        android:id="@+id/settingsBottom"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/settingsTop_guideline"
-        app:srcCompat="@drawable/conf_down_btn"
-        tools:ignore="MissingConstraints" />
-
 
     <Spinner
         android:id="@+id/protecteesList"
@@ -156,29 +162,22 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/middleVertical_guideline"
-        app:layout_constraintTop_toTopOf="@+id/settingsTop_guideline"
         tools:ignore="MissingConstraints" />
 
-    <!--<TextView
-        android:id="@+id/protecteesText"
+    <TextView
+        android:id="@+id/tv"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="@string/protectees"
         android:gravity="center"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        android:textSize="28dp"
+        android:padding="5sp"
+        android:singleLine="true"
+        android:textColor="@color/white_gray"
+        android:translationZ="10dp"
         app:layout_constraintBottom_toBottomOf="@+id/protecteesList"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toTopOf="@+id/protecteesList" />
--->
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/settingsTop_guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_end="63dp" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/protecteesList"
+        tools:ignore="MissingConstraints" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/middleVertical_guideline"
@@ -200,6 +199,40 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.41" />
+
+    <!--<ImageView
+        android:id="@+id/circleProtector"
+        android:layout_width="176dp"
+        android:layout_height="68dp"
+        app:layout_constraintBottom_toTopOf="@+id/topBar_guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.448"
+        app:layout_constraintStart_toStartOf="@+id/middleVertical_guideline"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.875"
+        app:srcCompat="@drawable/protector_circle"
+        tools:ignore="MissingConstraints"></ImageView>-->
+
+    <ImageButton
+        android:id="@+id/settings"
+        android:layout_width="60dp"
+        android:layout_height="0dp"
+        android:backgroundTint="@color/transparent"
+        app:layout_constraintBottom_toTopOf="@+id/topBar_guideline"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/icon_settings"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.17" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

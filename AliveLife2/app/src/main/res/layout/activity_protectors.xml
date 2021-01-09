@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#131231">
+    android:background="@color/dark_blue">
 
     <ImageButton
         android:id="@+id/BackButton"
@@ -15,28 +14,29 @@
         android:scaleX="1.5"
         android:scaleY="1.5"
         android:tint="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.041"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.022"
+        app:layout_constraintBottom_toTopOf="@+id/topBar_guideline"
+        app:layout_constraintEnd_toStartOf="@+id/startVertical2"
         app:srcCompat="?attr/actionModeCloseDrawable"
         tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/button"
-        android:layout_width="200dp"
+        android:layout_width="0dp"
         android:layout_height="50dp"
+        android:layout_marginBottom="36dp"
         android:backgroundTint="#C9C9D2"
         android:gravity="center|right"
         android:paddingEnd="20dp"
         android:text="Add Protector"
         android:textColor="#131231"
         app:cornerRadius="0dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="105dp"
-        tools:layout_editor_absoluteY="132dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/endVertical"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/startVertical"
+        app:layout_constraintTop_toTopOf="@+id/last_guideline"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView8"
@@ -45,9 +45,9 @@
         android:text="Protectors"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="149dp"
-        tools:layout_editor_absoluteY="16dp"
-        tools:ignore="MissingConstraints" />
+        tools:layout_editor_absoluteY="16dp" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -61,5 +61,40 @@
         app:layout_constraintTop_toTopOf="@+id/button"
         app:srcCompat="@android:drawable/ic_input_add"
         app:tint="#131231" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/topBar_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.08" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/last_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.90" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/startVertical"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/endVertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/startVertical2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.12" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

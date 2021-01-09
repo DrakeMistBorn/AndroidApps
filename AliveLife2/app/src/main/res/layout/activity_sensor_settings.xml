@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#131231"
+    android:translationZ="0dp">
+
+    <ImageButton
+        android:id="@+id/BackButton"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:background="#00FFFFFF"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        android:tint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/startVertical"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.028"
+        app:srcCompat="?attr/actionModeCloseDrawable"
+        tools:ignore="MissingConstraints" />
+
+    <!--    ***************** TEXT VIEW ************************************-->
+
+    <TextView
+        android:id="@+id/tittle"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginTop="16dp"
+        android:text="Location, pictures, audio"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/locationTittle"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginBottom="14dp"
+        android:text="Location"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/first_guideline"
+        app:layout_constraintEnd_toEndOf="@id/endVertical"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/startVertical"
+        app:layout_constraintTop_toTopOf="@id/zero_guideline"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/TimeLapse1"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginBottom="14dp"
+        android:text="Time-Lapse"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/first_guideline"
+        app:layout_constraintEnd_toEndOf="@id/endVertical"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/startVertical"
+        app:layout_constraintTop_toTopOf="@id/zero_guideline"
+        app:layout_constraintVertical_bias="0.426"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/picturesTittle"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginBottom="14dp"
+        android:text="Pictures"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/second_guideline"
+        app:layout_constraintEnd_toEndOf="@id/endVertical"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/startVertical"
+        app:layout_constraintTop_toTopOf="@id/first_guideline"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/TimeLapse2"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginBottom="14dp"
+        android:text="Time-Lapse"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/second_guideline"
+        app:layout_constraintEnd_toEndOf="@id/endVertical"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/startVertical"
+        app:layout_constraintTop_toTopOf="@id/first_guideline"
+        app:layout_constraintVertical_bias="0.432"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/audioTittle"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginBottom="14dp"
+        android:text="Audio"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/third_guideline"
+        app:layout_constraintEnd_toEndOf="@id/endVertical"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/startVertical"
+        app:layout_constraintTop_toTopOf="@id/second_guideline"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/TimeLapse3"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="14dp"
+        android:text="Time-Lapse"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/third_guideline"
+        app:layout_constraintEnd_toEndOf="@id/endVertical"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/startVertical"
+        app:layout_constraintTop_toTopOf="@id/second_guideline"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/audioDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginTop="116dp"
+        android:layout_marginBottom="14dp"
+        android:text="Duration"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/third_guideline"
+        app:layout_constraintEnd_toEndOf="@id/endVertical"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/startVertical"
+        app:layout_constraintTop_toTopOf="@id/second_guideline"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textLocation"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:textSize="50px"
+        android:textColor="@color/white_gray"
+        app:layout_constraintEnd_toEndOf="@+id/endVertical"
+        app:layout_constraintTop_toBottomOf="@+id/switchLocationSett"
+        tools:ignore="MissingConstraints,UnknownIdInLayout" />
+
+    <TextView
+        android:id="@+id/textPhoto"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:textSize="50px"
+        android:textColor="@color/white_gray"
+        app:layout_constraintEnd_toEndOf="@+id/endVertical"
+        app:layout_constraintTop_toBottomOf="@+id/switchPicturesSett"
+        tools:ignore="MissingConstraints,UnknownIdInLayout" />
+
+    <TextView
+        android:id="@+id/textAudio"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:textSize="50px"
+        android:textColor="@color/white_gray"
+        app:layout_constraintEnd_toEndOf="@+id/endVertical"
+        app:layout_constraintTop_toBottomOf="@+id/switchAudioSett"
+        tools:ignore="MissingConstraints,UnknownIdInLayout" />
+
+    <TextView
+        android:id="@+id/textAudioDuration"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="12dp"
+        android:textSize="50px"
+        android:textColor="@color/white_gray"
+        app:layout_constraintEnd_toEndOf="@+id/endVertical"
+        app:layout_constraintTop_toBottomOf="@+id/audioBar"
+        tools:ignore="MissingConstraints,UnknownIdInLayout" />
+    <!--    ***************** SWITCH ************************************-->
+
+    <Switch
+        android:id="@+id/switchLocationSett"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/locationBar"
+        app:layout_constraintTop_toTopOf="@+id/zero_guideline"
+        app:layout_constraintVertical_bias="0.504" />
+
+    <Switch
+        android:id="@+id/switchPicturesSett"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/endVertical"
+        app:layout_constraintTop_toTopOf="@+id/first_guideline" />
+
+    <Switch
+        android:id="@+id/switchAudioSett"
+        android:layout_width="46dp"
+        android:layout_height="27dp"
+        app:layout_constraintEnd_toEndOf="@+id/endVertical"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintTop_toTopOf="@+id/second_guideline" />
+
+    <!--    ***************** SEEK BAR ************************************-->
+
+    <SeekBar
+        android:id="@+id/locationBar"
+        android:layout_width="0dp"
+        android:layout_height="31dp"
+        app:layout_constraintBottom_toTopOf="@+id/first_guideline"
+        app:layout_constraintEnd_toEndOf="@+id/endVertical"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/startVertical"
+        app:layout_constraintTop_toTopOf="@+id/zero_guideline"
+        app:layout_constraintVertical_bias="0.811"
+        tools:ignore="MissingConstraints"
+        tools:progressBackgroundTint="#FFFFFF" />
+
+    <SeekBar
+        android:id="@+id/photoBar"
+        android:layout_width="0dp"
+        android:layout_height="31dp"
+        android:layout_marginBottom="14dp"
+        app:layout_constraintBottom_toTopOf="@+id/second_guideline"
+        app:layout_constraintEnd_toEndOf="@+id/endVertical"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/startVertical"
+        tools:progressBackgroundTint="#FFFFFF" />
+
+    <!--    ***************** GUIDELINES ************************************-->
+
+    <SeekBar
+        android:id="@+id/audioBar"
+        android:layout_width="0dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="76dp"
+        app:layout_constraintEnd_toEndOf="@+id/endVertical"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/startVertical"
+        app:layout_constraintTop_toBottomOf="@+id/second_guideline"
+        tools:progressBackgroundTint="#FFFFFF" />
+
+    <SeekBar
+        android:id="@+id/audioBarDuration"
+        android:layout_width="0dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="@+id/endVertical"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/startVertical"
+        app:layout_constraintTop_toBottomOf="@+id/textAudioDuration"
+        tools:progressBackgroundTint="#FFFFFF" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/topBar_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.08" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/zero_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.10" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/first_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.30" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/second_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.50" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/last_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.90" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/startVertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.12" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/endVertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.88" />
+</androidx.constraintlayout.widget.ConstraintLayout>

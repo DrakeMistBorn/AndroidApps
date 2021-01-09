@@ -1,179 +1,304 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="#131231"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/dark_blue"
+    android:translationZ="-5dp">
+
+    <ImageButton
+        android:id="@+id/BackButton"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:background="#00FFFFFF"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        android:tint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/startVertical"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.028"
+        app:srcCompat="?attr/actionModeCloseDrawable"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/helpIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:translationZ="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/fifth_guideline"
+        app:layout_constraintTop_toTopOf="@+id/fourth_guideline"
+        app:srcCompat="@drawable/help_icon"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="356dp" />
+
+    <!--    ***************** BUTTONS ************************************-->
+
+    <Button
+        android:id="@+id/profileBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/transparent"
+        android:outlineSpotShadowColor="@color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/first_guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/zero_guideline" />
+
+    <Button
+        android:id="@+id/protectorsBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/second_guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/first_guideline"
+        android:outlineSpotShadowColor="@color/transparent"/>
+
+    <Button
+        android:id="@+id/protecteesBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/third_guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/second_guideline"
+        app:layout_constraintVertical_bias="1.0"
+        android:outlineSpotShadowColor="@color/transparent"/>
+
+    <Button
+        android:id="@+id/sensorBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/fourth_guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/third_guideline" />
+
+    <Button
+        android:id="@+id/helpBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/transparent"
+        app:layout_constraintBottom_toBottomOf="@+id/fifth_guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/fourth_guideline"
+        android:outlineSpotShadowColor="@color/transparent"/>
+
+    <!--    ***************** LINES ************************************-->
+
+    <ImageView
+        android:id="@+id/line1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/zero_guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/zero_guideline"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/line"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/line2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/first_guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/first_guideline"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/line"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/line3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/second_guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/second_guideline"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/line"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/line4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/third_guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/third_guideline"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/line"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/line5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/fourth_guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/fourth_guideline"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/line"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/line6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/fifth_guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/fifth_guideline"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/line"
+        tools:ignore="MissingConstraints" />
+
+    <!--    ***************** TEXT VIEW ************************************-->
 
     <TextView
-        android:id="@+id/textView6"
-        android:layout_width="117dp"
-        android:layout_height="29dp"
-        android:text="TextView"
-        android:textColorPrimary="#FFFFFF"
-        android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@+id/seekBar3"
+        android:id="@+id/tittle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Settings"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.187"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:layout_constraintVertical_bias="0.0"
-        tools:text="Time-Lapse"
-        tools:textColor="#FFFFFF"
-        tools:textSize="50px" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="16dp" />
 
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="117dp"
-            android:layout_height="29dp"
-            android:text="TextView"
-            android:textColorPrimary="#FFFFFF"
-            android:visibility="visible"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/switch8"
-            app:layout_constraintHorizontal_bias="0.275"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView2"
-            app:layout_constraintVertical_bias="0.385"
-            tools:text="VIDEO"
-            tools:textColor="#FFFFFF"
-            tools:textSize="50px" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Profile"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        android:translationZ="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/first_guideline"
+        app:layout_constraintStart_toStartOf="@+id/startVertical"
+        app:layout_constraintTop_toTopOf="@+id/zero_guideline"
+        tools:ignore="MissingConstraints" />
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="117dp"
-            android:layout_height="29dp"
-            android:text="TextView"
-            android:textColorPrimary="#FFFFFF"
-            android:visibility="visible"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/switch7"
-            app:layout_constraintHorizontal_bias="0.275"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:text="PHOTO"
-            tools:textColor="#FFFFFF"
-            tools:textSize="50px" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Protectors"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        android:translationZ="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/second_guideline"
+        app:layout_constraintStart_toStartOf="@+id/startVertical"
+        app:layout_constraintTop_toTopOf="@+id/first_guideline"
+        tools:ignore="MissingConstraints" />
 
-        <Switch
-            android:id="@+id/switch6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="48dp"
-            app:layout_constraintBottom_toTopOf="@+id/switch7"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.504" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Protectees"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        android:translationZ="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/third_guideline"
+        app:layout_constraintStart_toStartOf="@+id/startVertical"
+        app:layout_constraintTop_toTopOf="@+id/second_guideline"
+        app:layout_constraintVertical_bias="0.666"
+        tools:ignore="MissingConstraints" />
 
-        <Switch
-            android:id="@+id/switch7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="352dp"
-            android:layout_marginEnd="48dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Location, photos, audio"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        android:translationZ="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/fourth_guideline"
+        app:layout_constraintStart_toStartOf="@+id/startVertical"
+        app:layout_constraintTop_toTopOf="@+id/third_guideline"
+        tools:ignore="MissingConstraints" />
 
-        <Switch
-            android:id="@+id/switch8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="48dp"
-            android:layout_marginBottom="200dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/switch7"
-            app:layout_constraintVertical_bias="1.0" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Help"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        android:translationZ="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/fifth_guideline"
+        app:layout_constraintStart_toStartOf="@+id/startVertical"
+        app:layout_constraintTop_toTopOf="@+id/fourth_guideline"
+        tools:ignore="MissingConstraints" />
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="117dp"
-            android:layout_height="29dp"
-            android:text="TextView"
-            android:textColorPrimary="#FFFFFF"
-            android:visibility="visible"
-            app:layout_constraintBottom_toTopOf="@+id/textView4"
-            app:layout_constraintEnd_toStartOf="@+id/switch6"
-            app:layout_constraintHorizontal_bias="0.275"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.988"
-            tools:text="UBICATION"
-            tools:textColor="#FFFFFF"
-            tools:textSize="50px" />
+    <!--    ***************** GUIDELINES ************************************-->
 
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="117dp"
-            android:layout_height="29dp"
-            android:layout_marginBottom="48dp"
-            android:text="TextView"
-            android:textColorPrimary="#FFFFFF"
-            android:visibility="visible"
-            app:layout_constraintBottom_toTopOf="@+id/seekBar"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.187"
-            app:layout_constraintStart_toStartOf="parent"
-            tools:text="Time-Lapse"
-            tools:textColor="#FFFFFF"
-            tools:textSize="50px" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/topBar_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.08" />
 
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="117dp"
-            android:layout_height="29dp"
-            android:text="TextView"
-            android:textColorPrimary="#FFFFFF"
-            android:visibility="visible"
-            app:layout_constraintBottom_toTopOf="@+id/seekBar2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.187"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView2"
-            app:layout_constraintVertical_bias="0.0"
-            tools:text="Time-Lapse"
-            tools:textColor="#FFFFFF"
-            tools:textSize="50px" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/zero_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.10" />
 
-        <SeekBar
-            android:id="@+id/seekBar"
-            android:layout_width="262dp"
-            android:layout_height="31dp"
-            android:layout_marginBottom="64dp"
-            app:layout_constraintBottom_toTopOf="@+id/textView2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.369"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0"
-            tools:progressBackgroundTint="#FFFFFF" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/first_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.20" />
 
-        <SeekBar
-            android:id="@+id/seekBar2"
-            android:layout_width="262dp"
-            android:layout_height="31dp"
-            android:layout_marginTop="72dp"
-            app:layout_constraintBottom_toTopOf="@+id/seekBar3"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.369"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView2"
-            app:layout_constraintVertical_bias="0.0"
-            tools:progressBackgroundTint="#FFFFFF" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/second_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.30" />
 
-        <SeekBar
-            android:id="@+id/seekBar3"
-            android:layout_width="262dp"
-            android:layout_height="31dp"
-            android:layout_marginTop="72dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.369"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView3"
-            app:layout_constraintVertical_bias="0.0"
-            tools:progressBackgroundTint="#FFFFFF" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/third_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.40" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/fourth_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.50" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/fifth_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.60" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/startVertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.12" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

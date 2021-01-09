@@ -7,10 +7,13 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Spinner;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import java.util.List;
 
 public class ProtectorView extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
@@ -23,7 +26,7 @@ public class ProtectorView extends AppCompatActivity implements AdapterView.OnIt
         setContentView(R.layout.activity_protector_view);
 
         //User button settings
-        ImageButton userButton = findViewById(R.id.userViewBttn);
+        Button userButton = findViewById(R.id.userViewBttn);
         userButton.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View button) {
@@ -35,9 +38,13 @@ public class ProtectorView extends AppCompatActivity implements AdapterView.OnIt
 
 
         Spinner dropdown = findViewById(R.id.protecteesList);
-        String[] items = new String[]{"Protectee1", "Protectee2", "Protectee3"};
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
+        ProtecteeList protectees = new ProtecteeList();
+        protectees.AddItem(new ProtecteeItem(1, "mariapr1407@gmail.com"));
+        protectees.AddItem(new ProtecteeItem(1, "david.cen.lop5@gmail.com"));
+        Log.d("*****", "list: "+protectees.ToString());
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, protectees.ToString());
         dropdown.setAdapter(adapter);
+        dropdown.setBackgroundColor(1);
         dropdown.setOnItemSelectedListener(this);
     }
 
@@ -56,9 +63,7 @@ public class ProtectorView extends AppCompatActivity implements AdapterView.OnIt
     protected void onStart(){
         super.onStart();
         Log.d(etiqueta, "onStart: ");
-
     }
-
 
     @Override
     protected void onStop() {
@@ -71,21 +76,18 @@ public class ProtectorView extends AppCompatActivity implements AdapterView.OnIt
     protected void onDestroy() {
         super.onDestroy();
         Log.d(etiqueta, "onDestroy:");
-
     }
 
     @Override
     protected void onPause() {
         super.onPause();
         Log.d(etiqueta, "onPause:");
-
     }
 
     @Override
     protected void onResume() {
         super.onResume();
         Log.d(etiqueta, "onResume:");
-
     }
 
 
