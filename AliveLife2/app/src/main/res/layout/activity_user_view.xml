@@ -310,5 +310,29 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.17" />
 
+    <TextView
+        android:id="@+id/sensorStatusTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/middleVertical_guideline"
+        app:layout_constraintTop_toTopOf="@+id/topBar_guideline"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/backgroundID"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/photoBottom_guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.462"
+        app:layout_constraintStart_toStartOf="@+id/middleVertical_guideline" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
 

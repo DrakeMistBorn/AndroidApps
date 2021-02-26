@@ -18,13 +18,14 @@
         app:layout_constraintBottom_toTopOf="@+id/topBar_guideline"
         app:layout_constraintEnd_toStartOf="@+id/startVertical2"
         app:srcCompat="?attr/actionModeCloseDrawable"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        android:contentDescription="@string/back" />
 
     <TextView
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Protectees"
+        android:text="@string/protectees"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/topBar_guideline"
@@ -38,25 +39,26 @@
         android:layout_width="23dp"
         android:layout_height="20dp"
         android:translationZ="3dp"
-        app:layout_constraintBottom_toBottomOf="@+id/button2"
-        app:layout_constraintEnd_toEndOf="@+id/button2"
+        app:layout_constraintBottom_toBottomOf="@+id/addProtectee"
+        app:layout_constraintEnd_toEndOf="@+id/addProtectee"
         app:layout_constraintHorizontal_bias="0.05"
-        app:layout_constraintStart_toStartOf="@+id/button2"
-        app:layout_constraintTop_toTopOf="@+id/button2"
+        app:layout_constraintStart_toStartOf="@+id/addProtectee"
+        app:layout_constraintTop_toTopOf="@+id/addProtectee"
         app:srcCompat="@android:drawable/ic_input_add"
-        app:tint="#131231" />
+        app:tint="#131231"
+        android:contentDescription="@string/add_protectee" />
 
     <Button
-        android:id="@+id/button2"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
+        android:id="@+id/addProtectee"
+        android:layout_width="187dp"
+        android:layout_height="61dp"
         android:backgroundTint="#C9C9D2"
         android:gravity="center|right"
-        android:text="Add Protectee"
+        android:text="@string/add_protectee"
         android:textColor="#131231"
         app:cornerRadius="0dp"
         app:layout_constraintEnd_toStartOf="@+id/endVertical"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.416"
         app:layout_constraintStart_toStartOf="@+id/startVertical"
         app:layout_constraintTop_toTopOf="@+id/last_guideline"
         tools:ignore="MissingConstraints" />
@@ -80,14 +82,14 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.25" />
+        app:layout_constraintGuide_percent="0.19" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/endVertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.75" />
+        app:layout_constraintGuide_percent="0.8" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/startVertical2"
@@ -99,15 +101,17 @@
     <ListView
         android:id="@+id/tv"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white_gray"
         android:gravity="center"
+        android:maxWidth="0.5dp"
         android:padding="5sp"
         android:singleLine="true"
-        android:textColor="@color/white_gray"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintBottom_toTopOf="@+id/addProtectee"
         app:layout_constraintEnd_toStartOf="@+id/endVertical"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/startVertical"
-        app:layout_constraintTop_toTopOf="@+id/topBar_guideline" />
+        app:layout_constraintTop_toTopOf="@+id/topBar_guideline"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

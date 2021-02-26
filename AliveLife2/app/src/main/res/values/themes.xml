@@ -12,8 +12,9 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="Theme.AliveLife.CustomTheme">
+    <style name="Theme.AliveLife.CustomTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowCloseOnTouchOutside">true</item>
+
     </style>
 </resources>

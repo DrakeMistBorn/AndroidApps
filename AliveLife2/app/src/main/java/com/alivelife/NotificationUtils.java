@@ -7,6 +7,7 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.ContextWrapper;
 import android.content.Intent;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
 
 import static android.app.Notification.VISIBILITY_PUBLIC;
@@ -51,13 +52,17 @@ public class NotificationUtils  extends ContextWrapper {
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, 0);
 
-        return new Notification.Builder(getApplicationContext(), ANDROID_CHANNEL_ID)
+        Notification.Builder builder = new Notification.Builder(getApplicationContext(), ANDROID_CHANNEL_ID)
                 .setContentTitle(title)
                 .setContentText(body)
-                .setSmallIcon(android.R.drawable.stat_notify_more)
+                .setSmallIcon(R.drawable.notification_logo)
                 .setContentIntent(pendingIntent)
                 .setAutoCancel(true)
                 .setVisibility(VISIBILITY_PUBLIC);
+        return builder;
     }
 
+    /*.setSmallIcon(R.mipmap.ic_launcher)
+                .setLargeIcon(BitmapFactory.decodeResource(getResources(),
+    R.mipmap.ic_launcher))*/
 }

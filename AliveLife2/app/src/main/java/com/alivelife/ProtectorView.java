@@ -1,18 +1,26 @@
 package com.alivelife;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ListView;
 import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 
 public class ProtectorView extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
@@ -36,16 +44,35 @@ public class ProtectorView extends AppCompatActivity implements AdapterView.OnIt
 
         });
 
+        // Settings
+        ImageButton settingsButton = findViewById(R.id.settings);
+        settingsButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick (View pv) {
+                Intent settings_activity = new Intent(ProtectorView.this, Settings.class);
+                startActivity(settings_activity);
+            }
+        });
+
 
         Spinner dropdown = findViewById(R.id.protecteesList);
-        ProtecteeList protectees = new ProtecteeList();
-        protectees.AddItem(new ProtecteeItem(1, "mariapr1407@gmail.com"));
-        protectees.AddItem(new ProtecteeItem(1, "david.cen.lop5@gmail.com"));
+        UserList protectees = loadProtectors();
         Log.d("*****", "list: "+protectees.ToString());
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, protectees.ToString());
         dropdown.setAdapter(adapter);
-        dropdown.setBackgroundColor(1);
-        dropdown.setOnItemSelectedListener(this);
+        dropdown.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view,
+                                       int position, long id) {
+                    Log.i("*****", "You have changed the view to "+this);
+                }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+
+        });
     }
 
     @Override
@@ -99,5 +126,21 @@ public class ProtectorView extends AppCompatActivity implements AdapterView.OnIt
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
 
+    }
+
+    private UserList loadProtectors() {
+        SharedPreferences preferences=getSharedPreferences("state", Context.MODE_PRIVATE);
+        ArrayList<String> items;
+        items = new ArrayList<>(preferences.getStringSet("protectors", new HashSet<>()));
+        return ToList(items);
+    }
+
+    public UserList ToList (List<String> protectees){
+        UserList prot = new UserList();
+        int i;
+        for (i = 0; i < protectees.size(); i++){
+            prot.AddItem(new UserItem(protectees.get(i)));
+        }
+        return prot;
     }
 }

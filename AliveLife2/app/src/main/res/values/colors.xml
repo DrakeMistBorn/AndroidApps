@@ -4,6 +4,7 @@
     <color name="red_buttonColor">#9A0911</color>
     <color name="white_gray">#BCBAC5</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="light_white">#1A333356</color>
     <color name="light_blue">#333356</color>
     <color name="transparent">#00131231</color>
     <color name="black">#000000</color>

@@ -7,21 +7,23 @@
     android:background="@color/dark_blue">
 
     <ImageButton
-        android:id="@+id/BackButton"
+        android:id="@+id/backButton"
         android:layout_width="34dp"
         android:layout_height="34dp"
         android:background="#00FFFFFF"
         android:scaleX="1.5"
         android:scaleY="1.5"
         android:tint="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/topBar_guideline"
         app:layout_constraintEnd_toStartOf="@+id/startVertical"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.028"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="?attr/actionModeCloseDrawable"
         tools:ignore="MissingConstraints" />
+
+    <!--    ***************** TEXT VIEW ************************************-->
 
     <ImageView
         android:id="@+id/helpIcon"
@@ -29,40 +31,39 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:translationZ="5dp"
-        app:layout_constraintBottom_toTopOf="@id/topBar_guideline"
+        app:layout_constraintBottom_toTopOf="@+id/topBar_guideline"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/endVertical"
         app:srcCompat="@drawable/help_icon"
         tools:ignore="MissingConstraints" />
-
-    <!--    ***************** TEXT VIEW ************************************-->
 
     <TextView
         android:id="@+id/tittle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:text="Help"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/topBar_guideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="16dp" />
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/body"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        android:scrollbars="vertical"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/last_guideline"
-        app:layout_constraintEnd_toStartOf="@+id/endVertical"
+        app:layout_constraintEnd_toStartOf="@+id/endVerticalText"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/startVertical"
+        app:layout_constraintStart_toStartOf="@+id/startVerticalText"
         app:layout_constraintTop_toTopOf="@+id/zero_guideline"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"></TextView>
 
     <!--    ***************** GUIDELINES ************************************-->
 
@@ -88,11 +89,11 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
         app:layout_constraintGuide_percent="0.90" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/startVertical"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.12" />
+    android:id="@+id/startVertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_constraintGuide_percent="0.12" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/endVertical"
@@ -100,6 +101,20 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.88" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/startVerticalText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/endVerticalText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.98" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

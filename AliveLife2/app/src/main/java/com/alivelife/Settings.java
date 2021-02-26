@@ -85,8 +85,8 @@ public class Settings extends AppCompatActivity {
         helpBttn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d("******", "On help button");
                 Intent i = new Intent(Settings.this, Help.class);
+                Log.d("******", "On help button");
                 startActivity(i);
             }
         });

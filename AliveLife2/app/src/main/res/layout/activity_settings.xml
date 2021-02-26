@@ -24,18 +24,19 @@
         app:srcCompat="?attr/actionModeCloseDrawable"
         tools:ignore="MissingConstraints" />
 
+    <!--    ***************** BUTTONS ************************************-->
+
     <ImageView
         android:id="@+id/helpIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
         android:translationZ="5dp"
         app:layout_constraintBottom_toTopOf="@+id/fifth_guideline"
+        app:layout_constraintEnd_toEndOf="@+id/helpBtn"
         app:layout_constraintTop_toTopOf="@+id/fourth_guideline"
         app:srcCompat="@drawable/help_icon"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="356dp" />
-
-    <!--    ***************** BUTTONS ************************************-->
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/profileBtn"
@@ -80,7 +81,8 @@
         app:layout_constraintBottom_toBottomOf="@+id/fourth_guideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/third_guideline" />
+        app:layout_constraintTop_toTopOf="@+id/third_guideline"
+        android:outlineSpotShadowColor="@color/transparent"/>
 
     <Button
         android:id="@+id/helpBtn"
@@ -176,10 +178,12 @@
         android:text="Settings"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/topBar_guideline"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="@+id/startVertical"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:layout_width="wrap_content"

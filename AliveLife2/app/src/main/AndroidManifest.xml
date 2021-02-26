@@ -7,6 +7,7 @@
         tools:ignore="ScopedStorage" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-feature android:name="android.hardware.camera"
         android:required="true" />
@@ -20,7 +21,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AliveLife">
-        <activity android:name=".SignInActivity">
+        <activity android:name=".SignIn">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -45,25 +46,32 @@
         <activity
             android:name=".ProtectorView"
             android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".Help"
+            android:screenOrientation="portrait"/>
+
         <activity
             android:name=".PopWindowLogOut"
             android:theme="@style/Theme.AliveLife.CustomTheme"
             android:screenOrientation="portrait"/>
         <activity
             android:name=".PopWindowDeleteAccount"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AliveLife.CustomTheme"/>
         <activity
             android:name=".SensorSettings"
             android:screenOrientation="portrait"/>
         <activity
             android:name=".PopWindowAddProtectee"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AliveLife.CustomTheme"/>
         <activity
             android:name=".PopWindowAddProtector"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AliveLife.CustomTheme"/>
 
-        <activity android:name=".MainActivity"/>
-
+        <service android:name=".YourService"/>
 
     </application>
 

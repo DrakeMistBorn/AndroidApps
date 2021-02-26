@@ -9,23 +9,8 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add protector"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/topHorizontal_guideline"
-        tools:ignore="MissingConstraints" />
-
-    <EditText
-        android:id="@+id/editTextTextEmailAddress"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#1A333356"
-        android:ems="10"
-        android:inputType="textEmailAddress"
-        android:scaleX="1.5"
-        android:scaleY="2"
-        app:layout_constraintBottom_toTopOf="@+id/bottomHorizontal_guideline"
+        android:text="@string/add_protector"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/topHorizontal_guideline"
@@ -33,21 +18,39 @@
 
     <!--    ***************** BUTTONS ************************************-->
 
+    <EditText
+        android:id="@+id/editTextTextEmailAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:background="@color/light_white"
+        android:ems="7"
+        android:inputType="textEmailAddress"
+        android:scaleX="1"
+        android:scaleY="1.5"
+        app:layout_constraintBottom_toTopOf="@+id/bottomHorizontal_guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/topHorizontal_guideline"
+        app:layout_constraintVertical_bias="0.359"
+        tools:ignore="MissingConstraints" />
+
     <Button
+        android:id="@+id/cancelBttn"
         android:layout_width="124dp"
         android:layout_height="67dp"
         android:backgroundTint="@color/red_buttonColor"
-        android:text="Cancel"
+        android:text="@string/cancel"
         android:textColor="@color/white_gray"
         app:layout_constraintBottom_toTopOf="@+id/bottomHorizontal_guideline"
         app:layout_constraintEnd_toStartOf="@+id/middleVertical_guideline"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
+        android:id="@+id/acceptBttn"
         android:layout_width="124dp"
         android:layout_height="67dp"
         android:backgroundTint="@color/light_blue"
-        android:text="Accept"
+        android:text="@string/accept"
         android:textColor="@color/white_gray"
         app:layout_constraintBottom_toTopOf="@+id/bottomHorizontal_guideline"
         app:layout_constraintEnd_toEndOf="parent"
@@ -60,14 +63,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.33" />
+        app:layout_constraintGuide_percent="0.03" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/bottomHorizontal_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.66" />
+        app:layout_constraintGuide_percent="0.97" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/middleVertical_guideline"

@@ -17,16 +17,18 @@ public class Profile extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_profile);
 
         TextView nameID = findViewById(R.id.textView4);
         TextView emailID = findViewById(R.id.textView5);
+
         Log.d("******", "On create profile");
         //String idName = ;
         //nameID.autofill(AutofillValue.forText(String.valueOf(GoogleSignIn.getLastSignedInAccount(this).getGivenName())));
-        nameID.setText(String.valueOf(GoogleSignIn.getLastSignedInAccount(this).getGivenName()));
-        emailID.setText(String.valueOf(GoogleSignIn.getLastSignedInAccount(this).getEmail()));
+//        nameID.setText(String.valueOf(GoogleSignIn.getLastSignedInAccount(this).getGivenName()));
+//        emailID.setText(String.valueOf(GoogleSignIn.getLastSignedInAccount(this).getEmail()));
+        nameID.setText( "María" );
+        emailID.setText( "mariapr1407@gmail.com" );
         addListenerOnButton();
 
     }

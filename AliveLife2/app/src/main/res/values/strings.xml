@@ -9,4 +9,10 @@
     <string name="matricula">MAtricula</string>
     <string name="grupo">Grupo</string>
     <string name="anio">Año</string>
+    <string name="add_protectee">Add Protectee</string>
+    <string name="back">back_arrow</string>
+    <string name="add_protector">Add protector</string>
+    <string name="cancel">Cancel</string>
+    <string name="accept">Accept</string>
+    <string name="protectors">Protectors</string>
 </resources>

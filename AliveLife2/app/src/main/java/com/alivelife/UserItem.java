@@ -3,7 +3,7 @@ package com.alivelife;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class ProtecteeItem {
+public class UserItem {
     private int id;
     private String email;
 
@@ -11,13 +11,16 @@ public class ProtecteeItem {
     private static final String EMAIL_REGEX = "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$";
     private static final Pattern EMAIL_PATTERN = Pattern.compile(EMAIL_REGEX);
 
-    public ProtecteeItem(int id, String email){
+    public UserItem(int id, String email){
         this.id = id;
         if (validEmail(email)) {
             this.email = email;
         }
-        else{
+    }
 
+    public UserItem(String email){
+        if (validEmail(email)) {
+            this.email = email;
         }
     }
 
