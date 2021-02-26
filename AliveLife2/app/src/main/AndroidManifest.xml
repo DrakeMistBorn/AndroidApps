@@ -11,6 +11,9 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-feature android:name="android.hardware.camera"
         android:required="true" />
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"></uses-permission>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"></uses-permission>
     <uses-feature android:name="android.hardware.sensor.proximity"
         android:required="true">
     </uses-feature>
@@ -73,6 +76,24 @@
 
         <service android:name=".YourService"/>
 
+        <activity android:name=".UserView"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".Protectees"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".Protectors"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".Settings"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".Profile"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".ProtectorView"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".PopWindowLogOut"
+            android:theme="@style/Theme.AliveLife.CustomTheme"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".PopWindowDeleteAccount"
+            android:theme="@style/Theme.AliveLife.CustomTheme"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>
